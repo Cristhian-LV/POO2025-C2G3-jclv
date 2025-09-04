@@ -8,6 +8,7 @@ import java.util.List;
 
 @Service
 public class ParticipanteServicioImp extends ParticipanteRepository implements ParticipanteServicioI {
+
     @Override
     public void save(Participante participante) {
         participantes.add(participante);
@@ -15,7 +16,7 @@ public class ParticipanteServicioImp extends ParticipanteRepository implements P
 
     @Override
     public List<Participante> findAll(){
-        if (participantes.size()==1) {
+        if(participantes.size()==1){
             return super.findAll();
         }
         return participantes;
@@ -35,4 +36,5 @@ public class ParticipanteServicioImp extends ParticipanteRepository implements P
     public Participante findById(int index) {
         return participantes.get(index);
     }
+
 }
